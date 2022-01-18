@@ -1,0 +1,24 @@
+#! /usr/bin/bash
+
+echo "======Installing asdf======"
+bash ./tools/asdf
+
+echo "======Installing Neovim config======"
+bash ./tools/neovim
+
+echo "======Copy configurations======"
+
+echo "====Tmux===="
+ln -sf "$(pwd)/.tmux.conf" ~/.tmux.conf
+
+echo "====Fish===="
+ln -sf "$(pwd)/config.fish" ~/.config/fish/config.fish
+
+echo "====Alacritty===="
+mkdir -p ~/.config/alacritty
+ln -sf "$(pwd)/alacritty.yml" ~/.config/alacritty/alacritty.yml
+
+echo "====Kitty===="
+mkdir -p ~/.config/kitty
+ln -sf "$(pwd)/kitty/kitty.conf" ~/.config/kitty/kitty.conf
+ln -sf "$(pwd)/kitty/current_theme.conf" ~/.config/kitty/current_theme.conf
