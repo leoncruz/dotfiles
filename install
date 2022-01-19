@@ -3,6 +3,9 @@
 echo "======Installing asdf======"
 bash ./tools/asdf
 
+echo "======Installing Starship======"
+bash ./tools/starship
+
 echo "======Installing Neovim config======"
 bash ./tools/neovim
 
