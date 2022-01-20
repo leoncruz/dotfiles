@@ -7,6 +7,11 @@ ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 
 . $HOME/.asdf/asdf.sh
 
+asdf plugin-add python
+asdf plugin-add ruby
+asdf plugin-add nodejs
+asdf plugin-add java
+
 asdf install python 3.9.9
 asdf install ruby 3.0.1
 asdf install nodejs 16.13.2
