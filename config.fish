@@ -4,16 +4,8 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-alias gst='git status'
-alias glog='git log --oneline --decorate --graph'
-
 function fish_user_key_bindings
     bind -M insert \ce accept-autosuggestion
-end
-
-function gpsup
-    set git_branch (git branch --show-current)
-    git push --set-upstream origin $git_branch
 end
 
 set fish_greeting
