@@ -13,6 +13,7 @@ set fish_greeting
 set -Ux ANDROID_HOME ~/programs/android-sdk
 
 set -Ux CHROME_EXECUTABLE /usr/bin/google-chrome-stable
+set -Ux XDG_CONFIG_HOME ~/.config
 
 fish_add_path /opt/flutter/bin
 fish_add_path $ANDROID_HOME/emulator
@@ -29,3 +30,5 @@ fish_add_path $ANDROID_HOME/build-tools/31.0.0/
 
 source ~/.asdf/asdf.fish
 starship init fish | source
+
+. ~/.asdf/plugins/java/set-java-home.fish
