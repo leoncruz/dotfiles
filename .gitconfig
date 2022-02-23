@@ -5,6 +5,10 @@
 	cm = commit -m
 	cma = commit -am
 	amend = !git add . && git commit --amend
+	rs = "!f() { \
+		git reset --soft HEAD~$1; \
+		git restore --staged \\.; \
+	}; f"
 
 [core]
 	editor = nvim
