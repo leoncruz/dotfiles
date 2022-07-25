@@ -33,6 +33,5 @@ function be
 end
 
 source ~/.asdf/asdf.fish
-starship init fish | source
 
 . ~/.asdf/plugins/java/set-java-home.fish
