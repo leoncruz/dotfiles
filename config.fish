@@ -27,6 +27,9 @@ fish_add_path $ANDROID_HOME/build-tools/30.0.2/
 fish_add_path $ANDROID_HOME/build-tools/30.0.3/
 fish_add_path $ANDROID_HOME/build-tools/31.0.0/
 
+function be
+  bundle exec $argv
+end
 
 source ~/.asdf/asdf.fish
 starship init fish | source
