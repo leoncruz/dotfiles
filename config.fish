@@ -5,7 +5,7 @@ if status is-interactive
 end
 
 function fish_user_key_bindings
-    bind -M insert \ce accept-autosuggestion
+  bind -M insert \ce accept-autosuggestion
 end
 
 set fish_greeting
