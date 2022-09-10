@@ -5,25 +5,6 @@ if status is-interactive
     exec tmux
 end
 
-function fish_prompt
-    set is_git_repo (git rev-parse --is-inside-work-tree 2>/dev/null)
-
-    set_color $fish_color_cwd
-    echo -n $(prompt_pwd)
-
-    if test -n "$is_git_repo"
-        set git_branch (git branch --show-current)
-        echo -n ' on '
-
-        set_color --bold red
-        echo -n $git_branch
-    end
-
-    set_color normal
-    echo
-    printf '>> '
-end
-
 function fish_user_key_bindings
   bind -M insert \ce accept-autosuggestion
 end
@@ -51,6 +32,7 @@ function be
   bundle exec $argv
 end
 
+starship init fish | source
 source ~/.asdf/asdf.fish
 
 . ~/.asdf/plugins/java/set-java-home.fish
