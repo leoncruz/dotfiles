@@ -10,6 +10,12 @@
 	rs = "!f() { \
 		git reset HEAD~$1; \
 	}; f"
+	clear = !git restore . && git clean -fd
+	bn = "!f() { \
+		git switch -c $1; \
+	}; f"
 
 [core]
 	editor = nvim
+[pull]
+	rebase = false
