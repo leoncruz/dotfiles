@@ -16,7 +16,7 @@ ln -sf "$(pwd)/config.fish" ~/.config/fish/config.fish
 
 echo "====Alacritty===="
 mkdir -p ~/.config/alacritty
-ln -sf "$(pwd)/alacritty.yml" ~/.config/alacritty/alacritty.yml
+ln -sf "$(pwd)/alacritty.toml" ~/.config/alacritty/alacritty.toml
 
 echo "====Kitty===="
 mkdir -p ~/.config/kitty
