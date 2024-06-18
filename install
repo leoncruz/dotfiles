@@ -1,24 +1,37 @@
 #! /usr/bin/bash
 
-echo "======Installing asdf======"
-bash ./tools/asdf
+IS_ARCH=0
 
-echo "======Installing Neovim config======"
-bash ./tools/neovim
+if command -v "pacman" &> /dev/null
+then
+  IS_ARCH=1
+fi
 
-echo "======Copy configurations======"
+for filename in ./packages/*; do
+  source "$filename"
 
-echo "====Tmux===="
-ln -sf "$(pwd)/.tmux.conf" ~/.tmux.conf
+  if [ "$IS_ARCH" -eq 1 ]; then
+    install
+  fi
 
-echo "====Fish===="
-ln -sf "$(pwd)/config.fish" ~/.config/fish/config.fish
+  configure
 
-echo "====Alacritty===="
-mkdir -p ~/.config/alacritty
-ln -sf "$(pwd)/alacritty.toml" ~/.config/alacritty/alacritty.toml
+  unset -f install
+  unset -f configure
+done
 
-echo "====Kitty===="
-mkdir -p ~/.config/kitty
-ln -sf "$(pwd)/kitty/kitty.conf" ~/.config/kitty/kitty.conf
-ln -sf "$(pwd)/kitty/current-theme.conf" ~/.config/kitty/current-theme.conf
+other_packages=(
+  exa
+  bat
+  fd
+  ripgrep
+  fzf
+  lazygit
+)
+
+if [ "$IS_ARCH" -eq 1 ]; then
+  for package in "${other_packages[@]}"
+  do
+    sudo pacman -S "$package" --noconfirm
+  done
+fi

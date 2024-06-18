@@ -1,0 +1,16 @@
+#! /usr/bin/bash
+
+install() {
+  echo -e "\e[32m ===== Installing Tmux ===== \e[0m"
+  sudo pacman -S tmux --noconfirm
+}
+
+configure() {
+  echo -e "\e[32m ===== Copy Tmux Configurations ===== \e[0m"
+
+  mkdir -p ~/.config/tmux
+
+  ln -sf "$(pwd)/.config/tmux/.tmux.conf" ~/.config/tmux/tmux.conf
+
+  echo -e "\e[32m ===== Tmux End ===== \e[0m"
+}

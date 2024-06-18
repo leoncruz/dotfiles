@@ -1,0 +1,17 @@
+#! /usr/bin/bash
+
+install() {
+  echo -e "\e[32m ===== Installing Mise en Place ===== \e[0m"
+
+  curl https://mise.run | sh
+
+  mise activate
+}
+
+configure() {
+  mkdir -p ~/.config/mise
+
+  ln -sf "$(pwd)/.config/mise/mise.toml" ~/.config/mise
+
+  echo -e "\e[32m ===== Mise en Place End ===== \e[0m"
+}

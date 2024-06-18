@@ -1,0 +1,15 @@
+#! /usr/bin/bash
+
+install() {
+  echo -e "\e[32m ===== Installing Alacritty ===== \e[0m"  
+  sudo pacman -S alacritty --noconfirm
+}
+
+configure() {
+  echo -e "\e[32m ===== Copy Alacritty configurations ===== \e[0m"
+
+  mkdir -p ~/.config/alacritty
+  ln -sf "$(pwd)/.config/alacritty/alacritty.toml" ~/.config/alacritty/alacritty.toml
+
+  echo -e "\e[32m ===== Alacritty End ===== \e[0m"
+}

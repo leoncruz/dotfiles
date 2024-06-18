@@ -1,0 +1,14 @@
+#! /usr/bin/bash
+
+install() {
+  echo -e "\e[32m ===== Installing Git ===== \e[0m"
+  sudo pacman -S git --noconfirm
+}
+
+configure() {
+  echo -e "\e[32m ===== Copy Git configurations ===== \e[0m"
+
+  ln -sf "$(pwd)/.config/git/.gitconfig" ~/.gitconfig
+
+  echo -e "\e[32m ===== Git End \e[0m"
+}
