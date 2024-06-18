@@ -1,0 +1,11 @@
+#! /usr/bin/bash
+
+install() {
+  sudo pacman -S neovim --noconfirm
+}
+
+configure() {
+  mkdir -p ~/.config/nivm
+
+  ln -sf "$(pwd)/.config/nvim" ~/.config/nvim
+}
