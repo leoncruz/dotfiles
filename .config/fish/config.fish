@@ -1,5 +1,7 @@
 #! /usr/bin/fish
 
+fish_add_path $HOME/.npm-global/bin
+
 set -Ux TERM alacritty
 
 if status is-interactive
