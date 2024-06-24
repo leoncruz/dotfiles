@@ -10,7 +10,7 @@ configure() {
 
   mkdir -p ~/.config/tmux
 
-  ln -sf "$(pwd)/.config/tmux/.tmux.conf" ~/.config/tmux/tmux.conf
+  ln -sf "$(pwd)/.config/tmux/tmux.conf" ~/.config/tmux/tmux.conf
 
   echo -e "\e[32m ===== Tmux End ===== \e[0m"
 }
