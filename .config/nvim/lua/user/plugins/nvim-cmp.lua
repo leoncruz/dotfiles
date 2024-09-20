@@ -9,7 +9,6 @@ return {
 		{ "saadparwaiz1/cmp_luasnip" },
 		{ "rafamadriz/friendly-snippets" },
 		{ "honza/vim-snippets" },
-		{ "onsails/lspkind.nvim" },
-		{ "kkharji/lspsaga.nvim" }
+		{ "onsails/lspkind.nvim" }
 	}
 }
