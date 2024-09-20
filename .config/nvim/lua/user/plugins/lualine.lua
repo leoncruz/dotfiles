@@ -1,5 +1,5 @@
 local lsp_status = function()
-	local clients = vim.lsp.buf_get_clients()
+	local clients = vim.lsp.get_clients()
 
 	local active_clients = {}
 
