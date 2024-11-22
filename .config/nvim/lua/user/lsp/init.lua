@@ -41,7 +41,7 @@ lsp_config.elixirls.setup {
 	cmd = { 'language_server.sh' }
 }
 
-lsp_config.tsserver.setup {
+lsp_config.ts_ls.setup {
 	capabilities = cmp_capabilities
 }
 
