@@ -28,7 +28,7 @@ map("n", "<leader>t", "<cmd>TestNearest<CR>", {})
 -- Lspsaga
 map("v", "<leader>la", ":<C-U>Lspsaga range_code_action<CR>", {})
 map("n", "<leader>la", ":Lspsaga code_action<CR>", {})
-map("n", "<leader>lf", ":Lspsaga lsp_finder<CR>", {})
+map("n", "<leader>lf", ":Lspsaga finder<CR>", {})
 map("n", "<leader>lr", ":Lspsaga rename<CR>", {})
 map("n", "<leader>ld", ":Lspsaga show_line_diagnostics<CR>", {})
 map("n", "<leader>lc", ":Lspsaga show_cursor_diagnostics<CR>", {})
