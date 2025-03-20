@@ -1,5 +1,5 @@
 return {
-	"mattn/emmet-vim",
+	"kmoschcau/emmet-vim",
 		ft = {
 			"html",
 			"javascriptreact",
@@ -12,5 +12,4 @@ return {
 		config = function()
 			vim.cmd([[ imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>") ]])
 		end,
- }
-
+}
