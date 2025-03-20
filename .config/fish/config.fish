@@ -2,8 +2,6 @@
 
 fish_add_path $HOME/.npm-global/bin
 
-set -Ux TERM alacritty
-
 set -Ux EDITOR nvim
 
 if status is-interactive
