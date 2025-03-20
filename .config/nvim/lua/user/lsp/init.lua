@@ -5,9 +5,9 @@ local cmp = require("user.lsp.nvim_cmp")
 
 cmp.setup()
 
-lsp_config.solargraph.setup {
-	diagnostic = true,
-	capabilities = cmp_capabilities
+lsp_config.ruby_lsp.setup {
+	capabilities = cmp_capabilities,
+	filetypes = { "ruby", "erb", "eruby" }
 }
 
 lsp_config.jedi_language_server.setup {
@@ -52,10 +52,5 @@ lsp_config.tailwindcss.setup {
 }
 
 lsp_config.gopls.setup {
-	capabilities = cmp_capabilities
-}
-
-lsp_config.crystalline.setup {
-	cmd = { 'crystalline' },
 	capabilities = cmp_capabilities
 }
