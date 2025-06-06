@@ -34,7 +34,9 @@ map("n", "<leader>ld", ":Lspsaga show_line_diagnostics<CR>", {})
 map("n", "<leader>lc", ":Lspsaga show_cursor_diagnostics<CR>", {})
 map("n", "<leader>lnd", ":Lspsaga diagnostic_jump_next<CR>", {})
 map("n", "<leader>lpd", ":Lspsaga diagnostic_jump_prev<CR>", {})
-map("n", "<leader>lh", ":Lspsaga signature_help<CR>", {})
+map("n", "<leader>lh", ":Lspsaga hover_doc<CR>", {})
+
+map("n", "<leader>co", ":lua vim.lsp.codelens.run()<CR>", { silent = true })
 
 -- Telescope
 map("n", "<C-F>", ":Telescope live_grep<CR>", {})
