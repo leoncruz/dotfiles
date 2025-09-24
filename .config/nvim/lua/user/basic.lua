@@ -1,8 +1,6 @@
 -- Some basic configurations
 vim.g.mapleader = ' '
 
-vim.g.python3_host_prog = '~/.asdf/shims/python'
-
 vim.o.number = true
 vim.o.relativenumber = true
 vim.encoding = "UTF-8"
