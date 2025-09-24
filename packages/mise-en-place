@@ -11,7 +11,7 @@ install() {
 configure() {
   mkdir -p ~/.config/mise
 
-  ln -sf "$(pwd)/.config/mise/mise.toml" ~/.config/mise
+  ln -sf "$(pwd)/.config/mise/config.toml" ~/.config/mise/
 
   echo -e "\e[32m ===== Mise en Place End ===== \e[0m"
 }

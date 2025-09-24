@@ -1,3 +1,11 @@
 [tools]
 ruby = "latest"
-node = "lts"
+node = "latest"
+rust = "latest"
+go = "latest"
+flutter = "latest"
+java = "latest"
+crystal = "latest"
+elixir = "latest"
+clojure = "latest"
+python = "latest"
