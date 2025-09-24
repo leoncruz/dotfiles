@@ -1,46 +1,46 @@
 local map = vim.api.nvim_set_keymap
 
 -- Geral
-map("n", "<C-A>", "<cmd>NvimTreeToggle<CR>", {})
-map("n", "<C-[>", "<ESC>", {})
-map("v", "<C-[>", "<ESC>", {})
+map("n", "<C-A>", "<cmd>NvimTreeToggle<CR>", { silent = true })
+map("n", "<C-[>", "<ESC>", { silent = true })
+map("v", "<C-[>", "<ESC>", { silent = true })
 
 -- Move lines
-map("n", "<A-j>", ":m+1<CR>==", {})
-map("n", "<A-k>", ":m-2<CR>==", {})
+map("n", "<A-j>", ":m+1<CR>==", { silent = true })
+map("n", "<A-k>", ":m-2<CR>==", { silent = true })
 
-map("v", "<A-j>", ":m '>+1<CR>gv=gv", {})
-map("v", "<A-k>", ":m '<-2<CR>gv=gv", {})
+map("v", "<A-j>", ":m '>+1<CR>gv=gv", { silent = true })
+map("v", "<A-k>", ":m '<-2<CR>gv=gv", { silent = true })
 
-map("i", "<A-j>", "<Esc>:m+1<CR>==gi", {})
-map("i", "<A-k>", "<Esc>:m-2<CR>==gi", {})
+map("i", "<A-j>", "<Esc>:m+1<CR>==gi", { silent = true })
+map("i", "<A-k>", "<Esc>:m-2<CR>==gi", { silent = true })
 
 -- Terminal
-map("n", "<leader>T", "<cmd>tabnew | term<CR>", {})
-map("n", "<leader>b", "<cmd>belowright split | term<CR>", {})
-map("t", "ii", "<C-\\><C-N>", {})
+map("n", "<leader>T", "<cmd>tabnew | term<CR>", { silent = true })
+map("n", "<leader>b", "<cmd>belowright split | term<CR>", { silent = true })
+map("t", "ii", "<C-\\><C-N>", { silent = true })
 
 -- vim-test
-map("n", "<leader>s", "<cmd>TestSuite<CR>", {})
-map("n", "<leader>f", "<cmd>TestFile<CR>", {})
-map("n", "<leader>t", "<cmd>TestNearest<CR>", {})
+map("n", "<leader>s", "<cmd>TestSuite<CR>", { silent = true })
+map("n", "<leader>f", "<cmd>TestFile<CR>", { silent = true })
+map("n", "<leader>t", "<cmd>TestNearest<CR>", { silent = true })
 
 -- Lspsaga
-map("v", "<leader>la", ":<C-U>Lspsaga range_code_action<CR>", {})
-map("n", "<leader>la", ":Lspsaga code_action<CR>", {})
-map("n", "<leader>lf", ":Lspsaga finder<CR>", {})
-map("n", "<leader>lr", ":Lspsaga rename<CR>", {})
-map("n", "<leader>ld", ":Lspsaga show_line_diagnostics<CR>", {})
-map("n", "<leader>lc", ":Lspsaga show_cursor_diagnostics<CR>", {})
-map("n", "<leader>lnd", ":Lspsaga diagnostic_jump_next<CR>", {})
-map("n", "<leader>lpd", ":Lspsaga diagnostic_jump_prev<CR>", {})
-map("n", "<leader>lh", ":Lspsaga hover_doc<CR>", {})
+map("v", "<leader>la", ":<C-U>Lspsaga range_code_action<CR>", { silent = true })
+map("n", "<leader>la", ":Lspsaga code_action<CR>", { silent = true })
+map("n", "<leader>lf", ":Lspsaga finder<CR>", { silent = true })
+map("n", "<leader>lr", ":Lspsaga rename<CR>", { silent = true })
+map("n", "<leader>ld", ":Lspsaga show_line_diagnostics<CR>", { silent = true })
+map("n", "<leader>lc", ":Lspsaga show_cursor_diagnostics<CR>", { silent = true })
+map("n", "<leader>lnd", ":Lspsaga diagnostic_jump_next<CR>", { silent = true })
+map("n", "<leader>lpd", ":Lspsaga diagnostic_jump_prev<CR>", { silent = true })
+map("n", "<leader>lh", ":Lspsaga hover_doc<CR>", { silent = true })
 
 map("n", "<leader>co", ":lua vim.lsp.codelens.run()<CR>", { silent = true })
 
 -- Telescope
-map("n", "<C-F>", ":Telescope live_grep<CR>", {})
-map("n", "<C-P>", ":Telescope find_files<CR>", {})
+map("n", "<C-F>", ":Telescope live_grep<CR>", { silent = true })
+map("n", "<C-P>", ":Telescope find_files<CR>", { silent = true })
 
 -- Bufferline
 map("n", "<leader>e", ":BufferLineCycleNext<CR>", { silent = true })
