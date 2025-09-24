@@ -3,8 +3,8 @@ return {
 	opts = {
 		defaults = {
 			file_ignore_patterns = {
-				"node_modules", ".elixir_ls", "_build", "deps", "__pycache__",
-				".idea", ".dart_tool", "build", ".git", "ios/", "android/", "assets/vendor", "sorbet/"
+				"node_modules", ".elixir_ls", "deps", "__pycache__",
+				".idea", ".dart_tool", "build/", ".git", "ios/", "android/", "assets/vendor", "sorbet/"
 			}
 		},
 		pickers = {
