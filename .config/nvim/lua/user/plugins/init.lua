@@ -1,7 +1,6 @@
 return {
   -- General,
   "nvim-lua/plenary.nvim",
-  "tpope/vim-surround",
   "tpope/vim-fugitive",
   "tpope/vim-commentary",
   "vim-test/vim-test",
